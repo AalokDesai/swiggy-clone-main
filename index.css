@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* *,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+ /* Custom CSS to hide scrollbar */
+ .no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.body{
+    font-family: Poppins;
+}
+
+.shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #a9a9a9, #d3d3d3);
+    animation: shade 0.5s infinite;
+  }
